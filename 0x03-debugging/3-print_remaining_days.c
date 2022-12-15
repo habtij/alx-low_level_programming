@@ -12,18 +12,15 @@
 
 void print_remaining_days(int month, int day, int year)
 {
-	int total_days = 365;
-
 	if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
 	{
 		if (month >= 2 && day >= 60)
 		{
 			day++;
-			total_days++;
 		}
 
 		printf("Day of the year: %d\n", day);
-		printf("Remaining days: %d\n", total_days - day);
+		printf("Remaining days: %d\n", 366 - day);
 	}
 	else
 	{
