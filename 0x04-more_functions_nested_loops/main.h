@@ -11,5 +11,6 @@ int _abs(int);
 int _add(int, int);
 int _isupper(int);
 int _isdigit(int);
+int mul(int, int);
 
 #endif /* MAIN_H */
