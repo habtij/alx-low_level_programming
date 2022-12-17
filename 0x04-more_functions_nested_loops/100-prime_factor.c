@@ -38,6 +38,12 @@ void prime_factor(long n)
 			n /= i + 2;
 		}
 	}
+
+	if (n > 4)
+	{
+		max_prime = n;
+	}
+
 	printf("%d\n", max_prime);
 }
 
