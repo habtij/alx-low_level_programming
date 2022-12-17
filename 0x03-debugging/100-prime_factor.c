@@ -1,14 +1,15 @@
+#include "main.h"
 #include <stdio.h>
 #include <math.h>
 
 /**
- * main - Check for largest prime factor
+ * prime_factor - Prints largest prime factor
+ * @n: Argument
  *
- * Return: Always 0
+ * Return: void
  */
-int main(void)
+void prime_factor(long n)
 {
-	long n = 612852475143;
 	int max_prime, i;
 
 	while (n % 2 == 0)
@@ -38,5 +39,17 @@ int main(void)
 		}
 	}
 	printf("%d\n", max_prime);
+}
+
+/**
+ * main - Check the code
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	long n = 612852475143;
+
+	prime_factor(n);
 	return (0);
 }
