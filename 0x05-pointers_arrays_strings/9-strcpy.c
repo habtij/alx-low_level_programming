@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * _strcpy - copy string pointed to by src, including the null byte, into the dest
+ * _strcpy - copy string pointed to by src, including the null byte,
+ * into the dest
  * @src: first argument
  * @dest: second argument
  *
