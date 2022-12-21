@@ -15,9 +15,10 @@ int main(void)
 		latest_val = latest_val + last_val;
 		printf("%d", latest_val);
 		last_val = latest_val - last_val;
-		i++;
-		if (i != 98)
+
+		if (i != 97)
 			printf(", ");
+		i++;
 	}
 	printf("\n");
 	return (0);
