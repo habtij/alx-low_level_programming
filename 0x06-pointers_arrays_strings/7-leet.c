@@ -8,20 +8,19 @@
  */
 char *leet(char *s)
 {
-	char val[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int num[] = {4, 4, 3, 3, 0, 0, 7, 7, 1, 1};
+	char val[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char num[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; val[j] != '\0'; j++)
+		for (j = 0; j < 11; j++)
 		{
-			if (val[j] == s[i])
+			if (s[i] == val[j])
 			{
-				s[i] = num[j];
+				*(s + i) = num[j];
 			}
 		}
-		s[i] = s[i];
 	}
 	return (s);
 }
