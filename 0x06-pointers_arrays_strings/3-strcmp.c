@@ -19,13 +19,18 @@ int _strcmp(char *s1, char *s2)
 
 	if (s1_len != s2_len)
 	{
-		if (s1_len > s2_len)
+		for (i = 0; i < s1_len; i++)
 		{
-			return ((int)(unsigned char)s1[0] - (int)(unsigned char)s2[0]);
-		}
-		else
-		{
-			return ((int)(unsigned char)s1[0] - (int)(unsigned char)s2[0]);
+			if (s1_len > s2_len)
+			{
+				if (s1[i] != s2[i])
+					return ((int)(unsigned char)s1[i] - (int)(unsigned char)s2[i]);
+			}
+			else
+			{
+				if (s1[i] != s2[i])
+					return ((int)(unsigned char)s1[i] - (int)(unsigned char)s2[i]);
+			}
 		}
 	}
 	else
