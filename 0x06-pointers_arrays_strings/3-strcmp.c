@@ -33,7 +33,8 @@ int _strcmp(char *s1, char *s2)
 		for (k = 0; k <= s1_len; k++)
 		{
 			if (s1[k] != s2[k])
-				return ((int)(unsigned char)s1[s1_len - 1] - (int)(unsigned char)s2[s1_len - 1]);
+				return ((int)(unsigned char)s1[s1_len - 1] -
+						(int)(unsigned char)s2[s1_len - 1]);
 		}
 	}
 	return (0);
