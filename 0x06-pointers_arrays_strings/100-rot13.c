@@ -24,10 +24,6 @@ char *rot13(char *s)
 			{
 				s[i] = p2[j];
 			}
-			else if (s[i] == p2[j])
-			{
-				s[i] = p1[j];
-			}
 		}
 	}
 	return (s);
