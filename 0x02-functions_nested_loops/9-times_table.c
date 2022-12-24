@@ -37,8 +37,16 @@ void times_table(void)
 		{
 			mul = n * i;
 			print_number(mul);
-			_putchar(',');
-			_putchar(' ');
+			if (i != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				if (mul <= 9)
+				{
+					_putchar(' ');
+				}
+			}
 		}
 		n++;
 		_putchar('\n');
