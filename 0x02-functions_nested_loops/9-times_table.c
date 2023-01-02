@@ -27,7 +27,7 @@ void print_number(int n)
  */
 void times_table(void)
 {
-	int n = 0, i;
+	int i;
 	int j = 0;
 	int mul;
 
@@ -35,20 +35,20 @@ void times_table(void)
 	{
 		for (i = 0; i <= 9; i++)
 		{
-			mul = n * i;
+			mul = j * i;
 			print_number(mul);
+
 			if (i != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 
-				if (mul <= 9)
+				if (mul >= 0 && mul <= 9)
 				{
 					_putchar(' ');
 				}
 			}
 		}
-		n++;
 		_putchar('\n');
 		j++;
 	}
