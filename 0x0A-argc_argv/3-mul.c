@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - multiplies argument and print to stdout
@@ -19,7 +20,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		mul *= atoi(argv[i]);
 	}
