@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
 
 /**
  * main - add the arguments and output to stdout
@@ -12,8 +13,11 @@
  */
 int main(int argc, char **argv)
 {
-	int i, j, sum = 0;
+	int i, num, sum = 0;
+	long conv;
+	char *p;
 
+	errno = 0;
 	if (argc == 1)
 	{
 		printf("%d\n", 0);
@@ -22,15 +26,21 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		j = atoi(argv[i]);
-		if (j != 0)
-		{
-			sum += j;
-		}
-		else
+		/*
+		 * Better explained by Sir Luc, comment no 2
+		 * https://stackoverflow.com/questions
+		 *	/9748393/how-can-i-get-argv-as-int
+		 */
+		conv = strtol(argv[i], &p, 10);
+		if (*p != '\0')
 		{
 			printf("Error\n");
 			return (1);
+		}
+		else
+		{
+			num = conv;
+			sum += num;
 		}
 	}
 	printf("%d\n", sum);
