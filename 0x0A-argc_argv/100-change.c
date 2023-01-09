@@ -18,21 +18,25 @@ int iter_val(int val)
 		{
 			res += val / 25;
 			val = val % 25;
+			i = 0;
 		}
 		else if (val < 25 && val >= 10)
 		{
 			res += val / 10;
 			val = val % 10;
+			i = 0;
 		}
 		else if (val < 10 && val >= 5)
 		{
 			res += val / 5;
 			val = val % 5;
+			i = 0;
 		}
 		else if (val < 5 && val >= 2)
 		{
 			res += val / 2;
 			val = val % 2;
+			i = 0;
 		}
 		else if (val == 1)
 		{
