@@ -15,10 +15,10 @@ char *_strdup(char *str)
 	int i, len;
 	char *p;
 
-	len = strlen(str);
 	if (!str)
-		return (0);
+		return (NULL);
 
+	len = strlen(str);
 	if (len == 1)
 		return (NULL);
 
