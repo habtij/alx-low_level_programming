@@ -17,7 +17,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (!s1 || !s2)
 	{
-		return (NULL);
+		return (0);
 	}
 
 	len1 = strlen(s1);
