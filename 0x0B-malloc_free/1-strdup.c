@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	char *p;
 
 	len = strlen(str);
-	if (str != '\0')
+	if (*str != '\0')
 		return (NULL);
 
 	if (len == 1)
