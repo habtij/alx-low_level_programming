@@ -23,9 +23,9 @@ char *str_concat(char *s1, char *s2)
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	p = malloc(sizeof(char) * (len1 + len2) + 1);
-	p = strcat(*p, *s1);
-	p = strcat(*p, *s2);
-	p = strcat(*p, '\0');
+	p = strcat(p, s1);
+	p = strcat(p, s2);
+	p = strcat(p, '\0');
 
 	return (p);
 	free(p);
