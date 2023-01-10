@@ -30,6 +30,10 @@ char *_strdup(char *str)
 			p[i] = str[i];
 		}
 	}
+	else
+	{
+		return (NULL);
+	}
 	return (p);
 	free(p);
 }
