@@ -11,11 +11,11 @@
  */
 char **strtow(char *str)
 {
-	int i;
+	int i, len = 0;
 	char **p;
 
-	if (str == NULL || str == "")
+	if (str[0] == NULL || str == "")
 		return (NULL);
 
-
+	len = strlen(str
 }
