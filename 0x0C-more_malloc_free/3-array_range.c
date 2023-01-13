@@ -22,6 +22,7 @@ int *array_range(int min, int max)
 	while (min <= max)
 	{
 		count++;
+		min++;
 	}
 
 	arr = malloc(sizeof(int) * count);
