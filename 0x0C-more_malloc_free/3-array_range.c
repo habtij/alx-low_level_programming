@@ -19,7 +19,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	for (min <= max)
+	while (min <= max)
 	{
 		count++;
 		min++;
