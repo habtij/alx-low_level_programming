@@ -36,12 +36,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 		if (ptr == NULL)
 		{
-			free(str);
 			return (str);
 		}
-
-		/* memset(str, ptr, new_size); */
+		free(str);
 	}
-	free(str);
 	return (str);
 }
