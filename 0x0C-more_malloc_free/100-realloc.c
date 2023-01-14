@@ -40,11 +40,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (str);
 		}
 
-		for (i = 0; ptr[i] != '\0'; i++)
-		{
-			str[i] = ptr[i];
-		}
-		str[i + 1] = '\0';
+		memset(str, ptr, new_size);
 	}
 	return (str);
 	free(str);
