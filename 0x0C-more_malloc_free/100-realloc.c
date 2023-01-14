@@ -11,7 +11,41 @@
  *
  * Return: nothing
  */
-void *_realloc(char *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int i;
+	char *str;
+
+	if (new_size == old_size)
+	{
+		return (ptr);
+	}
+
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	if (new_size > old_size || ptr == NULL)
+	{
+		str = malloc(new_size);
+		if (str == NULL)
+		{
+			return (NULL);
+		}
+
+		if (ptr == NULL)
+		{
+			return (str);
+		}
+
+		for (i = 0; ptr[i] != '\0'; i++)
+		{
+			str[i] = ptr[i];
+		}
+		str[i + 1] = '\0';
+	}
+	return (str);
+	free(str);
 }
