@@ -17,11 +17,8 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	int (*ptr(char *))(int, int);
-	ptr = &get_op_func;
-	if (ptr(argv[2]) != NULL)
-	{
-		ptr(argv[2])(atoi(argv[1]), atoi(argv[3]));
-	}
+	printf("%d\n",
+			(get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]))));
+
 	return (0);
 }
