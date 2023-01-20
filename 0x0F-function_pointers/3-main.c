@@ -23,6 +23,11 @@ int main(int argc, char **argv)
 	n1 = atoi(argv[1]);
 	op = (char *)argv[2];
 	n2 = atoi(argv[3]);
+	if (op[1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	if ((*op == '/' && n2 == 0) ||
 			(*op == '%' && n2 == 0))
 	{
