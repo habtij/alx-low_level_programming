@@ -52,7 +52,10 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int i, len;
 
-	len = strlen(format);
+	if (format != NULL)
+	{
+		len = strlen(format);
+	}
 	i = 0;
 	va_start(args, format);
 	while (i < len)
