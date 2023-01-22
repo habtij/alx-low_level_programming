@@ -52,21 +52,18 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int i, len;
 
-	if (format != NULL)
-	{
-		len = strlen(format);
+	len = strlen(format);
 
-		i = 0;
-		va_start(args, format);
-		while (i < len)
-		{
-			check_format(args, format[i]);
-			if (i != (len - 1) && (format[i] == 'c' || format[i] == 'i'
-					|| format[i] == 'f' || format[i] == 's'))
-				printf(", ");
-			i++;
-		}
-		va_end(args);
-		printf("\n");
+	i = 0;
+	va_start(args, format);
+	while (i < len)
+	{
+		check_format(args, format[i]);
+		if (i != (len - 1) && (format[i] == 'c' || format[i] == 'i'
+				|| format[i] == 'f' || format[i] == 's'))
+			printf(", ");
+		i++;
 	}
+	va_end(args);
+	printf("\n");
 }
