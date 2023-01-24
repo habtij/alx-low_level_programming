@@ -50,23 +50,19 @@ void check_format(va_list a, char c)
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i, len;
+	size_t i;
 
-	if (format != NULL)
+
+	i = 0;
+	va_start(args, format);
+	while (format != NULL && format[i] != '\0')
 	{
-		len = strlen(format);
-
-		i = 0;
-		va_start(args, format);
-		while (i < len)
-		{
-			check_format(args, format[i]);
-			if (i != (len - 1) && (format[i] == 'c' || format[i] == 'i'
-					|| format[i] == 'f' || format[i] == 's'))
-				printf(", ");
-			i++;
-		}
-		va_end(args);
-		printf("\n");
+		check_format(args, format[i]);
+		if (i != (strlen(format) - 1) && (format[i] == 'c'
+					|| format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+			printf(", ");
+		i++;
 	}
+	va_end(args);
+	printf("\n");
 }
