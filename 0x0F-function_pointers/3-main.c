@@ -28,8 +28,8 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*op == '/' && n2 == 0) ||
-			(*op == '%' && n2 == 0))
+	if ((op[0] == '/' && n2 == 0) ||
+			(op[0] == '%' && n2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
