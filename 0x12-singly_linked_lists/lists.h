@@ -1,5 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
+#include <stddef.h>
 
 int _putchar(char c);
 
@@ -14,7 +15,7 @@ int _putchar(char c);
 typedef struct list_s
 {
 	char *str;
-i	unsigned int len;
+	unsigned int len;
 	struct list_s *next;
 } list_t;
 
