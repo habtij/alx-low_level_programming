@@ -7,13 +7,16 @@
  *
  * Return: nothing
  */
-void free_list(list_t **head)
+void free_list(list_t *head)
 {
-	if (*head != NULL)
+	if (head != NULL)
 	{
-		free(*head->str);
-		*head->str = NULL;
-		free(*head);
+		if (head->str != NULL)
+		{
+			free(head->str);
+			head->str = NULL;
+		}
+		free(head);
 		head = NULL;
 	}
 }
