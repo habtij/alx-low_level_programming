@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 #include <stdlib.h>
 
 /**
@@ -17,6 +17,5 @@ void free_list(list_t *head)
 			head->str = NULL;
 		}
 		free(head);
-		head = NULL;
 	}
 }
