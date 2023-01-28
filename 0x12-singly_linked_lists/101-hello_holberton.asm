@@ -4,6 +4,7 @@ global    main
           section   .text
 main:  
           mov       rdi, message
+	  xor	    rax, rax
           call      printf
           ret
 message:
