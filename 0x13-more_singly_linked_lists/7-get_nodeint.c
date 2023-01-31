@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * get_listint - get the node at index position
+ * get_nodeint_at_index - get the node int at index position
  * @head: pointer to head
  * @index: the node index
  *
