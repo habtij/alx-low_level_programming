@@ -21,6 +21,7 @@ unsigned int binary_to_uint(const char *b)
 		len++;
 	}
 
+	len -= 1;
 	while (len >= 0)
 	{
 		if (b[len] != '0' && b[len] != '1')
