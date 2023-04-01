@@ -20,10 +20,10 @@ if (new == NULL)
 }
 
 new->n = n;
-*head->prev = new;
-new->next = *head;
+head->prev = new;
+new->next = head;
 new->prev = NULL;
-*head = new;
+head = new;
 
 return (new);
 free(new);
