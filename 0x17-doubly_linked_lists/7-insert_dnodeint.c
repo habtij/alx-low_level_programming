@@ -27,7 +27,6 @@ while ((*h) != NULL)
 {
 if (i == idx)
 {
-(*h)->prev->next = new;
 new->prev = (*h)->prev;
 new->next = (*h);
 (*h)->prev = new;
