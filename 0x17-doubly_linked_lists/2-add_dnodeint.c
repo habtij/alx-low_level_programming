@@ -20,9 +20,16 @@ return (NULL);
 }
 
 new->n = n;
-(*head)->prev = new;
-new->next = *head;
+
+new->next = (*head);
 new->prev = NULL;
+
+if ((*head) !=  NULL)
+{
+(*head)->prev = new;
+}
+
+(*head) = new;
 
 return (new);
 free(new);
