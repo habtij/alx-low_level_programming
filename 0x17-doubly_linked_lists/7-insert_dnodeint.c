@@ -33,6 +33,7 @@ new->next = (*h);
 (*h) = new;
 }
 i++;
+(*h) = (*h)->next;
 }
 return (NULL);
 free(new);
