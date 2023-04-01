@@ -22,7 +22,7 @@ if (new == NULL)
 new->n = n;
 *head->prev = new;
 new->next = *head;
-*new->prev = NULL;
+new->prev = NULL;
 *head = new;
 
 return (new);
