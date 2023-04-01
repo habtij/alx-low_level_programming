@@ -29,8 +29,8 @@ if (i == idx)
 {
 new->prev = (*h)->prev;
 new->next = (*h);
+(*h)->prev->next = new;
 (*h)->prev = new;
-(*h) = new;
 return (new);
 }
 i++;
