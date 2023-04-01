@@ -30,6 +30,8 @@ if (i == idx)
 new->prev = (*h)->prev;
 new->next = (*h);
 (*h)->prev = new;
+(*h) = new;
+return (new);
 }
 i++;
 (*h) = (*h)->next;
