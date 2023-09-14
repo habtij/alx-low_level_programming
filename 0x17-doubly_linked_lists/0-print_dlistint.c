@@ -19,6 +19,5 @@ printf("%d\n", h->n);
 h = h->next;
 n++;
 }
-
 return (n);
 }
