@@ -4,7 +4,7 @@
  * hash_table_print - prints a hash table content to stdout
  * @ht: A pointer to the hash table
  *
- * Decription: The function prints out the key/value pairs from the hash table
+ * Description: The function prints out the key/value pairs from the hash table
  */
 void hash_table_print(const hash_table_t *ht)
 {
