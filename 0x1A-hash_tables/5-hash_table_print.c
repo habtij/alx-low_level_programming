@@ -24,7 +24,7 @@ if (ht->array[i] != NULL)
 {
 if (comma == 1)
 {
-print(", ");
+printf(", ");
 }
 node = ht->array[i];
 while (node != NULL)
@@ -34,7 +34,7 @@ node = node->next;
 
 if (node != NULL)
 {
-print(", ");
+printf(", ");
 }
 }
 comma = 1;
