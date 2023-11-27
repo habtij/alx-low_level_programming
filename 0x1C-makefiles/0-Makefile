@@ -1,0 +1,12 @@
+# Create your first Makefile
+
+all: school
+
+school: a.out
+	gcc main.o -o school
+
+main.o: main.c
+	gcc main.c
+
+school.o: school.c
+	gcc school.c
