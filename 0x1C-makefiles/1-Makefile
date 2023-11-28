@@ -1,0 +1,8 @@
+# Create your first Makefile
+CC=gcc
+SRC=%.c
+
+all: school
+
+school: $(SRC) m.h
+	$(CC) $(SRC) -o school
