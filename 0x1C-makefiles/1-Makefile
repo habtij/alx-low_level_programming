@@ -1,6 +1,6 @@
 # Create your first Makefile
 CC=gcc
-SRC=%.c
+SRC=main.c school.c
 
 all: school
 
