@@ -1,0 +1,16 @@
+# Create your first useful Makefile
+CC=gcc
+SRC=main.c school.c
+OBJ=main.o school.o
+NAME=school
+
+all: $(NAME)
+
+$(NAME): $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
+
+school.o: school.c m.h
+	$(CC) -c school.c
+
+main.o: main.c m.h
+	$(CC) -c main.c
